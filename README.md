@@ -46,6 +46,7 @@ The simplest way to launch Steam is by running:
 ```sh
 git clone https://github.com/arno01/steam.git
 cd steam
+chgrp docker data -R && chmod g+s data
 docker-compose run steam
 ```
 
