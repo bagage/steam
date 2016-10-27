@@ -41,9 +41,6 @@ if [ -e /dev/nvidiactl ]; then
   fi
 fi
 
-# Use libgcrypt provided by the Steam docker image (needed by HL1 engine games)
-export LD_PRELOAD="/lib/i386-linux-gnu/libgcrypt.so.11:/lib/x86_64-linux-gnu/libgcrypt.so.11"
-
 #
 # Try to load host's libGL (generic or Nvidia 32/64-bit) drivers
 #
