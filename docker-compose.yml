@@ -3,7 +3,7 @@ version: '2'
 services:
   steam:
     image: andrey01/steam
-    network_mode: bridge
+    network_mode: host # it's important to use host network so that streaming works
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
       - /etc/localtime:/etc/localtime:ro
@@ -27,7 +27,6 @@ services:
       - /usr/X11R6/lib64:/h11_64:ro
       - /usr/lib:/h12_32:ro
       - /usr/lib64:/h13_64:ro
-    dns: steam # a DNS cache is needed to avoid upstream bug https://github.com/ValveSoftware/steam-for-linux/issues/3401
     devices:
       - /dev/nvidia0
       - /dev/nvidiactl
