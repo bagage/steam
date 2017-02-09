@@ -3,7 +3,7 @@ version: '2'
 services:
   steam:
     image: andrey01/steam
-    network_mode: bridge
+    network_mode: host # it's important to use host network so that streaming works
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
       - /etc/localtime:/etc/localtime:ro
