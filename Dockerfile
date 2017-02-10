@@ -20,6 +20,7 @@ RUN echo "deb [arch=amd64,i386] http://repo.steampowered.com/steam/ precise stea
                        libopenal1 libnss3 libgconf-2-4 libxss1 libnm-glib4 \
                        libnm-util2 libglu1-mesa locales libsdl2-image-2.0 \
                        steam-launcher \
+                       xdg-utils firefox-esr \
                        mesa-utils:i386 \
                        libstdc++5 libstdc++5:i386 libbz2-1.0:i386 \
                        libavformat56 libswscale3 libavcodec56:i386 \
