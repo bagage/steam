@@ -2,7 +2,8 @@ version: '2'
 
 services:
   steam:
-    image: andrey01/steam
+    build: .
+#    image: andrey01/steam
     network_mode: host # it's important to use host network so that streaming works
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
@@ -28,11 +29,6 @@ services:
       - /usr/lib:/h12_32:ro
       - /usr/lib64:/h13_64:ro
     devices:
-      - /dev/nvidia0
-      - /dev/nvidiactl
-      - /dev/nvidia-uvm
-      # uncomment this when running NVIDIA Driver >= 361
-      - /dev/nvidia-modeset
       - /dev/dri
       # - /dev/snd
     environment:
